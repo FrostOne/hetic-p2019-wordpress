@@ -1,65 +1,37 @@
-var gulp         = require('gulp');
-var sass         = require('gulp-sass');
-var cssnano      = require('gulp-cssnano');
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
-var browserSync  = require('browser-sync');
+var browserSync = require('browser-sync').create();
+var imagemin = require('gulp-imagemin');
 
-// Lint Task
-gulp.task('lint', function() {
-  return gulp.src('app/js/*.js')
-  .pipe(jshint())
-  .pipe(jshint.reporter('default'))
-  .on('error', function(error) {
-    console.error('' + error);
-  })
-})
-
-gulp.task('style', function() {
-  return gulp.src('app/sass/*.scss') // Gets all files ending with .scss in app/scss
-  .pipe(sass.sync().on('error', sass.logError)) // avoid break script if error sass
-  .pipe(autoprefixer({
-    browsers: ['last 4 versions'],
-    cascade: false
-  }))
-  .pipe(cssnano())
-  .pipe(gulp.dest('dist/css'))
+gulp.task('sass', function () {
+  return gulp
+    .src('./src/style/*.scss')
+    .pipe(sourcemaps.init())
+    .pipe(sass({errLogToConsole: true, outputStyle: 'expanded'}).on('error', sass.logError))
+    .pipe(sourcemaps.write())
+    .pipe(autoprefixer({browsers: ['last 2 versions', '> 5%', 'Firefox ESR']}))
+    .pipe(gulp.dest('./'))
+    .pipe(browserSync.stream());
 });
 
-gulp.task('sass', function() {
-  return gulp.src('app/sass/*.scss') // Gets all files ending with .scss in app/scss
-  .pipe(sass.sync().on('error', sass.logError)) // avoid break script if error sass
-  .pipe(autoprefixer({
-    browsers: ['last 4 versions'],
-    cascade: false
-  }))
-  .pipe(gulp.dest('app/css'))
-  .pipe(browserSync.reload({
-    stream: true
-  }))
+// Compress images
+gulp.task('images', () =>
+  gulp.src('src/images/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('./images'))
+);
+
+// Static Server + watching scss/html files
+gulp.task('serve', ['sass'], function() {
+    browserSync.init({
+        server: "./"
+    });
+
+    gulp.watch('./src/style/**/*.scss', ['sass']);
+    gulp.watch('./src/images/*', ['images']);
+    gulp.watch('./*.html').on('change', browserSync.reload);
 });
 
-gulp.task('browserSync', function() {
-  browserSync({
-    server: {
-      baseDir: 'app'
-    },
-  })
-})
-
-// Compress imgs
-gulp.task('imagemin', function() {
-  return gulp.src('app/src/img/*')
-  .pipe(imagemin({
-    progressive: true
-  }))
-  .pipe(gulp.dest('dist/img'))
-})
-
-gulp.task('dev', ['browserSync', 'sass', 'scripts'], function (){
-  gulp.watch('app/sass/**/*.scss', ['sass']);
-  gulp.watch('app/*.html', browserSync.reload);
-  gulp.watch('app/js/**/*.js', browserSync.reload);
-  // Other watchers
-});
-
-gulp.task('build', ['imagemin', 'style', 'scripts']);
+gulp.task('default', ['sass', 'images', 'serve']);

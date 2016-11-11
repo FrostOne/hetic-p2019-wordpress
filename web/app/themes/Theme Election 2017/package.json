@@ -20,6 +20,13 @@
   },
   "homepage": "https://github.com/FrostOne/hetic-p2019-wordpress#readme",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "browser-sync": "^2.17.5",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-connect-php": "0.0.8",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^2.2.0"
   }
 }

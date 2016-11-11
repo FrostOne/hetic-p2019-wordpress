@@ -3,5 +3,15 @@ Theme Name: Election Theme 2017
 Author: Suong Kevin Tan, Ulysse Tallepied, Thomas Sanlis, Simon Schreiber, Margaux Tellier, David Taing
 Version: 1.0
 Author URI: http://www.hetic.net/
-Description: 
+Description:
 */
+.hey {
+  background-color: red;
+}
+
+.hey-hoe {
+  font-size: 10px;
+  background-color: orange;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic3R5bGUuY3NzIiwic291cmNlcyI6WyJzdHlsZS5zY3NzIiwiY29tcG9uZW50cy9fbXlDb21wb25lbnQuc2NzcyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKlxuVGhlbWUgTmFtZTogRWxlY3Rpb24gVGhlbWUgMjAxN1xuQXV0aG9yOiBTdW9uZyBLZXZpbiBUYW4sIFVseXNzZSBUYWxsZXBpZWQsIFRob21hcyBTYW5saXMsIFNpbW9uIFNjaHJlaWJlciwgTWFyZ2F1eCBUZWxsaWVyLCBEYXZpZCBUYWluZ1xuVmVyc2lvbjogMS4wXG5BdXRob3IgVVJJOiBodHRwOi8vd3d3LmhldGljLm5ldC9cbkRlc2NyaXB0aW9uOlxuKi9cblxuQGltcG9ydCBcImNvbXBvbmVudHMvbXlDb21wb25lbnRcIjtcbiIsIi5oZXkge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZWQ7XG4gICYtaG9le1xuICAgIGZvbnQtc2l6ZTogMTBweDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBvcmFuZ2U7XG4gIH1cbn1cbiJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7OztFQU1FO0FDTkYsQUFBQSxJQUFJLENBQUM7RUFDSCxnQkFBZ0IsRUFBRSxHQUFJO0NBS3ZCOztBQU5ELEFBQUEsUUFBSSxDQUVHO0VBQ0gsU0FBUyxFQUFFLElBQUs7RUFDaEIsZ0JBQWdCLEVBQUUsTUFBTztDQUMxQiIsIm5hbWVzIjpbXX0= */
