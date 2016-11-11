@@ -7,4 +7,4 @@ Main repository for the Wordpress developpement project of the third-year HETIC
 ```
 $ composer install
 ```
-3. Work in the web/app directory.
+And work in the web/app directory.
