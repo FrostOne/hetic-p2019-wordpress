@@ -3,6 +3,8 @@
 include_once('inc/custom_post_types.php');
 // roles init
 include_once('inc/roles.php');
+// taxonomies init
+// include_once('inc/taxonomies.php');
 // styles script init
 // include_once('inc/scripts_styles.php');
 // theme support
