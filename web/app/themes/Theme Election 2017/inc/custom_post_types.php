@@ -1,7 +1,7 @@
 <?php
-add_action('init', 'create_custom_post_type_soutiens');
+add_action('init', 'create_custom_post_type_soutien');
 
-function create_custom_post_type_annonces(){
+function create_custom_post_type_soutien(){
   
   $labels = array(
         'name'               => 'Soutiens',
@@ -34,7 +34,7 @@ function create_custom_post_type_annonces(){
         'has_archive'         => false,
         'query_var'           => true,
         'can_export'          => true,
-        'rewrite'             => array( 'slug' => 'annonce' ),
+        'rewrite'             => array( 'slug' => 'soutien' ),
         'capabilities' => array(
                           'publish_posts' => 'publish_soutien',
                           'edit_posts' => 'edit_soutien',
