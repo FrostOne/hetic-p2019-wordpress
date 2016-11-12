@@ -4,9 +4,9 @@ include_once('inc/custom_post_types.php');
 // roles init
 include_once('inc/roles.php');
 // styles script init
-include_once('inc/scripts_styles.php');
+// include_once('inc/scripts_styles.php');
 // theme support
-include_once('inc/theme_support.php');
+// include_once('inc/theme_support.php');
 
 
 add_shortcode('commentaire', "function_commentaire_shortcode" ); 
