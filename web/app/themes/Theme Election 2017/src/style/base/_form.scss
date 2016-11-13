@@ -2,18 +2,3 @@
  * <form /> component style
  *
  */
-form {
-  input {
-    padding: 0px 1rem;
-    background-color: $white;
-    border: 1px solid $stack;
-    border-radius: 5px;
-  }
-  button {
-    background-color: $stack;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    padding: 0px 0.5rem;
-    color: $white;
-  }
-}

@@ -4,6 +4,9 @@ var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync').create();
 var imagemin = require('gulp-imagemin');
+var gp_concat = require('gulp-concat');
+var gp_rename = require('gulp-rename');
+var gp_uglify = require('gulp-uglify');
 
 gulp.task('sass', function () {
   return gulp
@@ -14,6 +17,16 @@ gulp.task('sass', function () {
     .pipe(autoprefixer({browsers: ['last 2 versions', '> 5%', 'Firefox ESR']}))
     .pipe(gulp.dest('./'))
     .pipe(browserSync.stream());
+});
+
+// scripts
+gulp.task('scripts', function(){
+    return gulp.src(['./src/scripts/lory.min.js'])
+        .pipe(gp_concat('script.js'))
+        .pipe(gulp.dest('./'))
+        .pipe(gp_rename('script.js'))
+        .pipe(gp_uglify())
+        .pipe(gulp.dest('./'));
 });
 
 // Compress images
@@ -34,4 +47,4 @@ gulp.task('serve', ['sass'], function() {
     gulp.watch('./*.html').on('change', browserSync.reload);
 });
 
-gulp.task('default', ['sass', 'images', 'serve']);
+gulp.task('default', ['sass', 'images', 'scripts', 'serve']);
