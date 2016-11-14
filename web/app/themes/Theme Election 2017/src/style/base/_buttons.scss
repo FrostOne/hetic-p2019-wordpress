@@ -3,3 +3,16 @@
  *
  */
 button {}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  margin-top: 1rem;
+  color: white;
+  height: 2.5rem;
+  padding: 1rem;
+  border-radius: 1.75rem;
+  background-color: #f7a072;
+}

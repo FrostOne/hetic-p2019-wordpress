@@ -1,0 +1,26 @@
+.supporters {
+  display: flex;
+  overflow-x: scroll;
+  flex-flow: column wrap;
+  height: 24rem;
+  &__single {
+    margin: .7rem;
+    margin-top: 1rem;
+  }
+  &__image {
+    background-size: cover;
+    height: 7rem;
+    width: 9rem;
+  }
+  &__name {
+    font-weight: 700;
+    font-size: .6rem;
+    margin-top: 1rem;
+  }
+  &__job {
+    font-weight: 400;
+    font-size: .6rem;
+    color: #b5b7bd;
+    margin-top: .3rem;
+  }
+}

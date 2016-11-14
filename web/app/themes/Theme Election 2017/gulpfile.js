@@ -21,7 +21,7 @@ gulp.task('sass', function () {
 
 // scripts
 gulp.task('scripts', function(){
-    return gulp.src(['./src/scripts/lory.min.js'])
+    return gulp.src(['./src/scripts/lory.min.js', './src/scripts/main.js'])
         .pipe(gp_concat('script.js'))
         .pipe(gulp.dest('./'))
         .pipe(gp_rename('script.js'))

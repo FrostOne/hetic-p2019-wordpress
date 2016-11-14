@@ -1,0 +1,22 @@
+.homepage {
+  .description {
+    margin: 0 3rem;
+    &__title {
+      font-family: 'Roboto', sans-serif;
+      font-size: 2rem;
+      margin-top: 3rem;
+      text-align: center;
+      color: #444a59;
+    }
+    &__content {
+      column-count: 2;
+      font-size: .8rem;
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.5rem;
+      margin: auto;
+      margin-top: 2rem;
+      max-width: 70rem;
+      color: #444a59;
+    }
+  }
+}
