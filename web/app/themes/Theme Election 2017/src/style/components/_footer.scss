@@ -1,0 +1,27 @@
+footer{
+	width: 100%;
+	height : 70px;
+	background: #191919;
+}
+footer div{
+	margin-top:30px!important;
+}
+footer .left{
+	text-align: right;
+}
+footer ul{
+	display : inline-block;
+
+}
+footer ul li {
+	
+	display: inline-block;
+	margin-right: 2em;
+	transition: border 0.3s ease;
+
+}
+footer{
+	font-size: 70%;
+	font-family: Roboto;
+	color:#fff;
+}
