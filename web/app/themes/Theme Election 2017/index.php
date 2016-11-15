@@ -1,37 +1,7 @@
 <?php get_header(); // call header.php  ?>
 
 <div class="carousel__slider js_slider js_simple">
-  <div class="carousel__frame js_frame">
-    <ul class="carousel__slides js_slides">
-      <li class="carousel__slide js_slide" style="background-image: url('<?php bloginfo('template_url'); ?>/src/images/delacroix.png');">
-        <div class="carousel__text">
-          <h2 class="carousel__title">POUR UNE<br>FRANCE PLUS <span style="color: #bfded9;">NEUTRE</span></h2>
-          <div class="carousel__description">Le vote blanc consiste à déposer un bulletrin blanc, ou une enveloppe vide dans l’urne. Cela manifeste une envie de </div>
-          <div class="button">SOUTENEZ LE <strong> VOTE BLANC</strong></div>
-      </div>
-  </li>
-  <li class="carousel__slide js_slide" style="background-image: url('<?php bloginfo('template_url'); ?>/src/images/delacroix.png');">
-    <div class="carousel__text">
-      <h2 class="carousel__title">POUR UNE<br>FRANCE PLUS <span style="color: #bfded9;">NEUTRE</span></h2>
-      <div class="carousel__description">Le vote blanc consiste à déposer un bulletrin blanc, ou une enveloppe vide dans l’urne. Cela manifeste une envie de </div>
-      <div class="button">SOUTENEZ LE <strong> VOTE BLANC</strong></div>
-  </div>
-</li>
-<li class="carousel__slide js_slide" style="background-image: url('<?php bloginfo('template_url'); ?>/src/images/delacroix.png');">
-    <div class="carousel__text">
-      <h2 class="carousel__title">POUR UNE<br>FRANCE PLUS <span style="color: #bfded9;">NEUTRE</span></h2>
-      <div class="carousel__description">Le vote blanc consiste à déposer un bulletrin blanc, ou une enveloppe vide dans l’urne. Cela manifeste une envie de </div>
-      <div class="button">SOUTENEZ LE <strong> VOTE BLANC</strong></div>
-  </div>
-</li>
-</ul>
-<span class="js_prev carousel__prev">
-  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 501.5 501.5"><g><path fill="#FFF" d="M302.67 90.877l55.77 55.508L254.575 250.75 358.44 355.116l-55.77 55.506L143.56 250.75z"/></g></svg>
-</span>
-<span class="js_next carousel__next">
-  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 501.5 501.5"><g><path fill="#FFF" d="M199.33 410.622l-55.77-55.508L247.425 250.75 143.56 146.384l55.77-55.507L358.44 250.75z"/></g></svg>
-</span>
-</div>
+<?php wd_slider(1); ?>
 </div>
 <section class="description">
   <h2 class="description__title">Votre vote est <strong>important</strong></h2>
@@ -83,7 +53,7 @@
             <div class="comments__single">
                 <div class="comments__content"><?php the_field('pourquoi_votez-vous_blanc_'); ?></div>
                 <div class="comments__profile-container">
-                <div class="comments__picture" style="background-image: url('<?php the_field('photo'); ?>')"></div>
+                    <div class="comments__picture" style="background-image: url('<?php the_field('photo'); ?>')"></div>
                     <div class="comments__name"><?php the_field('nom_et_prenom'); ?></div>
                 </div>
             </div>
