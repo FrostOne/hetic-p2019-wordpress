@@ -7,7 +7,6 @@ get_header(); // call header.php
 
 ?>
 <div class="blog">
-
   <main>
     <section class="cards">
       <article class="cards__single">
