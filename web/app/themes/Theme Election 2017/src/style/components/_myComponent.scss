@@ -1,7 +1,139 @@
-.hey {
-  background-color: red;
-  &-hoe{
-    font-size: 10px;
-    background-color: orange;
-  }
+body{
+	overflow : hidden;
+}
+div>img{
+	width: 100%;
+}
+
+.mt{
+	margin-top: 10%;
+}
+.mt2{
+	margin-top: 5%;
+}
+
+.bar{
+	width: 20%;
+	height: 1px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	background-color : #f7a072;
+}
+
+.bar3{
+	background: #212121;
+	margin-top:200px;
+	margin-bottom:200px;
+	height: 400px;
+	width: 100%;
+}
+
+.bar3 img{
+	
+	height: 110%;
+	width:auto;
+	margin: auto;
+	margin-top:-1.25%;
+}
+
+.bar2{
+
+	vertical-align:bottom;
+	height: 5em;
+	width:0.7em;
+	background : #f7a072;
+	position: relative;
+}
+
+.ma{
+	margin: auto!important;
+}
+
+
+
+button{
+	background : #f7a072;
+	padding: 10px;
+	border-radius:10px;
+	font-size : 90%;
+	font-family: Roboto;
+	color:#fff;
+	cursor: pointer;
+}
+
+.contact .text, 
+.contact textarea{
+	width:100%;
+	border: 1px solid b2b2b2;
+	background-color: #f5f5f5;
+	height: 3vw;
+	margin-top: 2vw;
+	border-radius:5px;
+	padding-left:10px;
+	font-size : 100%;
+	font-family: Roboto;
+}
+
+.contact textarea{
+	padding-top:20px;
+	height: 20vw;
+	overflow: hidden;
+}
+
+.catch{
+	background-image : url('../images/image-30-1.png');
+	background-size:100%;
+	width:100%;
+	height :40vw;
+	color:#fff;
+}
+
+.bottom{
+	position : absolute;
+	top : 30vw;
+}
+
+.programme{
+	&__title{
+		font-size: 200%;
+		font-family: Roboto;
+	}
+	&__subtitle{
+		font-size: 120%;
+		font-family: Roboto;
+	}
+	&__content{
+	font-size: 90%;
+	font-family: Roboto;
+	line-height:1.5em;
+	}
+}
+
+.pourquoi{
+	&__title{
+		font-size: 200%;
+		font-family: Roboto Black;
+		text-align : center;
+	}
+	&__subtitle{
+		font-size: 150%;
+		font-family: Roboto;
+	}
+	&__content{
+		font-size: 90%;
+		font-family: Roboto;
+		line-height:1.5em;
+	}
+}
+
+.contact{
+	&__title{
+		font-size: 120%;
+		font-family: Roboto;
+	}
+}
+
+.quote{
+	font-size: 2.5vw;
+	font-family: PlayfairDisplay-Regular;
 }
