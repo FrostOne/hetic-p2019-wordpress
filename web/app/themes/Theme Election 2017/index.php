@@ -65,3 +65,4 @@
     ?>
 </div>
 </section>
+<?php get_footer(); // call footer.php  ?>
