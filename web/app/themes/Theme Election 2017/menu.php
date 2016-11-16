@@ -1,5 +1,5 @@
  <nav class="row">
-    <img src="images/logo.png">
+    <img src="<?php bloginfo('template_directory'); ?>/images/logo.png">
     <div class="col-1"></div>
     <div class="col-7 ma">
       <ul>
@@ -16,5 +16,4 @@
       COMPTE À REBOURD ÉLÉCTORALE
       <div id="coutdown"></div>
     </div>
-    
   </nav>
