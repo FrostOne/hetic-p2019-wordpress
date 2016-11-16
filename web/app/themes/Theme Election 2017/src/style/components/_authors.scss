@@ -1,0 +1,24 @@
+.authors {
+  display: flex;
+  flex-flow: column nowrap;
+  &__single {
+    width: 10rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+  &__image {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-size: cover;
+    margin-right: 1rem;
+  }
+  &__name {
+    font-weight: 700;
+  }
+  &__title {
+    font-size: .9rem;
+  }
+}
