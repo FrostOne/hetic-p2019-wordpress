@@ -8,7 +8,7 @@ get_header(); // call header.php
 ?>
 
 
-<div class="catch">
+<div class="catch" style="background-image: url(<?php bloginfo('template_directory'); ?>/images/image-30-1.png);">
     <div class="bottom">
       <div class="row">    
         <div class="col-8">
