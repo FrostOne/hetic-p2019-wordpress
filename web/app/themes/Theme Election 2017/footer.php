@@ -36,7 +36,7 @@
 <footer id="footer">
     <div class="row">
         <div class="col-8">
-          <ul>
+          <ul class="menu">
               <li><a href="<?php echo home_url(); ?>" title="Accueil">ACCUEIL</a></li>
               <li><a href="?page_id=56" title="Pourquoi voter blanc">POURQUOI VOTER BLANC</a></li>
               <li><a href="?page_id=52" title="Le Programme">LE PROGRAMME</a></li>
