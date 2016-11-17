@@ -14,11 +14,11 @@ get_header(); // call header.php
   <div class="row mt2">
     <div class="col-05"></div>
     <div class="col-5">
-      <p class="desc__content">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre </p>
+      <p class="desc__content">Vous retrouverez dans cette section tous les gens qui nous soutiennent non seulement via des témoignages écrits, mais également par le biais de vidéos.</p>
     </div>
     <div class="col-05"></div>
     <div class="col-5">
-      <p class="desc__content">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre </p>
+      <p class="desc__content">Vous pouvez bien évidemment laissez le vôtre afin de nous montrer votre soutien, votre commentaire sera publié. Laisser un commentaire témoigne de votre soutien au mouvement.</p>
     </div>
   </div>
 

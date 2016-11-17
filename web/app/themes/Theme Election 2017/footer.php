@@ -8,20 +8,19 @@
     });
 </script>
 <footer id="footer">
-	<div class="row">
-	    <div class="col-8">
-	      <ul>
-	        <li>ACCUEIL</li>
-	        <li>POURQUOI VOTER BLANC</li>
-	        <li>LE PROGRAMME</li>
-	        <li>COMITÉ DE SOUTIEN</li>
-	        <li>BLOG</li>
-	        <li>CONTACT</li>
-	      </ul>
-	    </div>
-	    <div class="col-4 left">© Copyright 2016 - HETIC</div>
-	</div>
+    <div class="row">
+        <div class="col-8">
+          <ul>
+            <li>ACCUEIL</li>
+            <li>POURQUOI VOTER BLANC</li>
+            <li>LE PROGRAMME</li>
+            <li>COMITÉ DE SOUTIEN</li>
+            <li>BLOG</li>
+            <li>CONTACT</li>
+        </ul>
+    </div>
+    <div class="col-4 left">© Copyright 2016 - HETIC</div>
+</div>
 </footer>
-<?php wp_footer();  ?>
 </body>
 </html>
