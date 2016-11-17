@@ -1,11 +1,11 @@
 <?php get_header(); // call header.php  ?>
 
 <div class="carousel__slider js_slider js_simple">
-    <?php wd_slider(1); ?>
+    <?php wd_slider(1);?>
     <div class="carousel__text">
       <h2 class="carousel__title">POUR UNE<br>FRANCE PLUS <span style="color: #bfded9;">NEUTRE</span></h2>
       <div class="carousel__description">Le vote blanc consiste à déposer un bulletrin blanc, ou une enveloppe vide dans l’urne. Cela manifeste une envie de </div>
-      <div class="button">SOUTENEZ LE <strong>&nbsp VOTE BLANC</strong></div>
+      <div class="button">SOUTENEZ LE <strong>VOTE BLANC</strong></div>
   </div>
 </div>
 <section class="description">
@@ -18,28 +18,28 @@
 </section>
 <section class="supporters">
     <?php
-    $args=array(
-        'post_type' => 'soutien',
-        'posts_per_page' => 16
-        );
-    // The Query
-    $the_query = new WP_Query( $args );
-    // The Loop
-    if ( $the_query->have_posts() ) {
-        while ( $the_query->have_posts() ) {
-            $the_query->the_post();
-            ?>
+$args = array(
+    'post_type'      => 'soutien',
+    'posts_per_page' => 16,
+);
+// The Query
+$the_query = new WP_Query($args);
+// The Loop
+if ($the_query->have_posts()) {
+    while ($the_query->have_posts()) {
+        $the_query->the_post();
+        ?>
             <div class="supporters__single">
-                <div class="supporters__image" style="background-image:url('<?php the_field('photo'); ?>');"></div>
-                <h5 class="supporters__name"><?php the_field('poste_actuel'); ?></h5>
-                <div class="supporters__job"><?php the_field('nom_et_prenom'); ?></div>
+                <div class="supporters__image" style="background-image:url('<?php the_field('photo');?>');"></div>
+                <h5 class="supporters__name"><?php the_field('poste_actuel');?></h5>
+                <div class="supporters__job"><?php the_field('nom_et_prenom');?></div>
             </div>
-            <?php      
-        }
-        /* Restore original Post Data */
-        wp_reset_postdata();
-    }
-    ?>
+            <?php
+}
+    /* Restore original Post Data */
+    wp_reset_postdata();
+}
+?>
 </section>
 <section class="cta">
   <div class="cta__text">Vous avez le pouvoir de changer les choses, votez blanc</div>
@@ -48,30 +48,30 @@
 <section style="background-color : black;">
   <div class="comments">
       <?php
-      $args=array(
-        'post_type' => 'soutien',
-        'posts_per_page' => 3
-        );
-    // The Query
-      $the_query = new WP_Query( $args );
-    // The Loop
-      if ( $the_query->have_posts() ) {
-        while ( $the_query->have_posts() ) {
-            $the_query->the_post();
-            ?>
+$args = array(
+    'post_type'      => 'soutien',
+    'posts_per_page' => 3,
+);
+// The Query
+$the_query = new WP_Query($args);
+// The Loop
+if ($the_query->have_posts()) {
+    while ($the_query->have_posts()) {
+        $the_query->the_post();
+        ?>
             <div class="comments__single">
-                <div class="comments__content"><?php the_field('pourquoi_votez-vous_blanc_'); ?></div>
+                <div class="comments__content"><?php the_field('pourquoi_votez-vous_blanc_');?></div>
                 <div class="comments__profile-container">
-                    <div class="comments__picture" style="background-image: url('<?php the_field('photo'); ?>')"></div>
-                    <div class="comments__name"><?php the_field('nom_et_prenom'); ?></div>
+                    <div class="comments__picture" style="background-image: url('<?php the_field('photo');?>')"></div>
+                    <div class="comments__name"><?php the_field('nom_et_prenom');?></div>
                 </div>
             </div>
-            <?php      
-        }
-        /* Restore original Post Data */
-        wp_reset_postdata();
-    }
-    ?>
+            <?php
+}
+    /* Restore original Post Data */
+    wp_reset_postdata();
+}
+?>
 </div>
 </section>
 <?php get_footer(); // call footer.php  ?>

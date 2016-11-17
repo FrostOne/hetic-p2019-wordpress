@@ -1,72 +1,61 @@
 <?php
 /*
 Template Name: Blog
-*/
+ */
 
-get_header(); // call header.php  
-
+get_header(); // call header.php
 ?>
 <div class="blog">
   <main>
     <section class="cards">
-      <article class="cards__single">
-        <div class="cards__cover" style="background-image: url('<?php bloginfo('template_directory'); ?>/images/margaux.png')"></div>
-        <div class="cards__description-container">
-          <div class="cards__title"><strong>VOTER BLANC :</strong> LOREM IPSUM ?</div>
-          <div class="cards__subtitle">Par Lorem Ipsum</div>
-          <div class="cards__description">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker...<a href="#" class="cards__cta">Lire la suite</a></div>
-        </div>
+      <?php
+      $recentPosts = new WP_Query();
+      $recentPosts->query('showposts=5');
+      ?>
+
+      <?php while ($recentPosts->have_posts()): $recentPosts->the_post();?>
+        <article class="cards__single">
+          <div class="cards__cover" style="background-image: url('<?php the_post_thumbnail_url(); ?>'); background-position: 0; background-size: 100%"></div>
+          <div class="cards__description-container">
+            <div class="cards__title"><?php (the_title());?></div>
+            <div class="cards__subtitle">Par <?php (the_author());?></div>
+            <div class="cards__description"><?php the_excerpt();?>
+              <a href="<?php the_permalink();?>" class="cards__cta">Lire la suite</a></div>
+          </div>
       </article>
-      <article class="cards__single">
-        <div class="cards__cover" style="background-image: url('<?php bloginfo('template_directory'); ?>/images/margaux.png')"></div>
-        <div class="cards__description-container">
-          <div class="cards__title"><strong>VOTER BLANC :</strong> LOREM IPSUM ?</div>
-          <div class="cards__subtitle">Par Lorem Ipsum</div>
-          <div class="cards__description">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker...<a href="#" class="cards__cta">Lire la suite</a></div>
-        </div>
-      </article>
-      <article class="cards__single">
-        <div class="cards__cover" style="background-image: url('<?php bloginfo('template_directory'); ?>/images/margaux.png')"></div>
-        <div class="cards__description-container">
-          <div class="cards__title"><strong>VOTER BLANC :</strong> LOREM IPSUM ?</div>
-          <div class="cards__subtitle">Par Lorem Ipsum</div>
-          <div class="cards__description">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker...<a href="#" class="cards__cta">Lire la suite</a></div>
-        </div>
-      </article>
+    <?php endwhile;?>
+
     </section>
     <section>
-      <h3>Auteurs</h3>
-      <div class="authors">
-        <div class="authors__single">
-          <div class="authors__image" style="background-image : url('<?php bloginfo('template_directory'); ?>/images/margaux.png')"></div>
-          <div>
-            <div class="authors__name">Lorem Ipsum</div>
-            <div class="authors__title">Acteur</div>
-          </div>
-        </div>
-        <div class="authors__single">
-          <div class="authors__image" style="background-image : url('<?php bloginfo('template_directory'); ?>/images/margaux.png')"></div>
-          <div>
-            <div class="authors__name">Lorem Ipsum</div>
-            <div class="authors__title">Acteur</div>
-          </div>
-        </div>
-        <div class="authors__single">
-          <div class="authors__image" style="background-image : url('<?php bloginfo('template_directory'); ?>/images/margaux.png')"></div>
-          <div>
-            <div class="authors__name">Lorem Ipsum</div>
-            <div class="authors__title">Acteur</div>
-          </div>
-        </div>
-        <div class="authors__single">
-          <div class="authors__image" style="background-image : url('<?php bloginfo('template_directory'); ?>/images/margaux.png')"></div>
-          <div>
-            <div class="authors__name">Lorem Ipsum</div>
-            <div class="authors__title">Acteur</div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+    <h3>Auteurs</h3>
+    <div class="authors">
+        <?php
+        $args = array(
+            'post_type'      => 'soutien',
+            'posts_per_page' => 4,
+            );
+        // The Query
+        $the_query = new WP_Query($args);
+        // The Loop
+        if ($the_query->have_posts()) {
+            while ($the_query->have_posts()) {
+                $the_query->the_post();
+                ?>
+                <div class="authors__single">
+                    <div class="authors__image" style="background-image : url('<?php the_field('photo');?>')"></div>
+                    <div>
+                        <div class="authors__name"><?php the_field('nom_et_prenom');?></div>
+                        <div class="authors__title"><?php the_field('poste_actuel');?></div>
+                    </div>
+                </div>
+                <?php
+            }
+            /* Restore original Post Data */
+            wp_reset_postdata();
+        }
+        ?>
+    </div>
+</section>
+</main>
 </div>
 <?php get_footer(); // call footer.php  ?>

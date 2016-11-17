@@ -9,6 +9,8 @@ include_once('inc/roles.php');
 // include_once('inc/scripts_styles.php');
 // theme support
 // include_once('inc/theme_support.php');
+// activate thumbnail
+add_theme_support( 'post-thumbnails' );
 
 
 add_shortcode('commentaire', "function_commentaire_shortcode" ); 
