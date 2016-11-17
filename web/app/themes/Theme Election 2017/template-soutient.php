@@ -64,20 +64,20 @@ get_header(); // call header.php
   <div class="row flex">
     <div class="col-5 vertical-align">
       <div class="post">
-        <h3 class="post__author">Jean Dujardin</h3>
-        <p class="post__content">“Le vote blanc c’est vraiment incroyable !! J’adore voter blanc, je vais le faire toute ma vie.”</p>
+        <h3 class="post__author">Madelene Lacharité</h3>
+        <p class="post__content">“J'ai voté blanc parce que le monde part en vrille.”</p>
       </div>
       <div class="post">
-        <h3 class="post__author">Jean Dujardin</h3>
-        <p class="post__content">“Le vote blanc c’est vraiment incroyable !! J’adore voter blanc, je vais le faire toute ma vie.”</p>
+        <h3 class="post__author">Constance Bossé</h3>
+        <p class="post__content">“C'est vrai que le vote blanc ne fait avancer notre société, mais bon ça ne va pas la faire reculer non plus. Si ?”</p>
       </div>
       <div class="post">
-        <h3 class="post__author">Jean Dujardin</h3>
-        <p class="post__content">“Le vote blanc c’est vraiment incroyable !! J’adore voter blanc, je vais le faire toute ma vie.”</p>
+        <h3 class="post__author">Perrin Leduc</h3>
+        <p class="post__content">“Je me suis trompé lors du vote. Je croyais voter pour Monsieur Blanc...”</p>
       </div>
       <div class="post">
-        <h3 class="post__author">Jean Dujardin</h3>
-        <p class="post__content">“Le vote blanc c’est vraiment incroyable !! J’adore voter blanc, je vais le faire toute ma vie.”</p>
+        <h3 class="post__author">René Parent</h3>
+        <p class="post__content">“Mon fils m'a dit de voter blanc, du coup j'ai voté blanc.”</p>
       </div>
   
     </div>
