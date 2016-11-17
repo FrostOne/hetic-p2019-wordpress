@@ -49,9 +49,9 @@ get_header(); // call header.php
     </div>
     
   </div>
-  <div class="ban">
+  <div class="ban flex" style="background-image:url('<?php bloginfo('template_directory'); ?>/images/ban-1.png');">
       <div class="row">
-        <div class="ma ban__title col-8">  Vous avez le Pouvoir de changer les chose, votez blanc</div>
+        <div class="ma ban__title col-8">  Vous avez le pouvoir de changer les choses : votez blanc</div>
         <div class="ban__button">
           <button class="ma"> SOUTENEZ <strong>LE VOTE BLANC</strong></button>
         </div>
@@ -61,8 +61,8 @@ get_header(); // call header.php
   
   <div class="row"><div class="bar4"></div><div class="separation"></div></div>
 
-  <div class="row2">
-    <div class="col-5">
+  <div class="row flex">
+    <div class="col-5 vertical-align">
       <div class="post">
         <h3 class="post__author">Jean Dujardin</h3>
         <p class="post__content">“Le vote blanc c’est vraiment incroyable !! J’adore voter blanc, je vais le faire toute ma vie.”</p>

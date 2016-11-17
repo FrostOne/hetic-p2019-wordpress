@@ -85,7 +85,7 @@ get_header(); // call header.php
       <div class="row">
         <div class="col-2 ma"><div class="bar2"></div></div>
         <p class="col-10 ma pourquoi__content">
-         Voter blanc, c’est pointer du doigt le manque de diversité de la scène politique française, c’est manifester son mécontentement face au peu de choix que nous offre le système actuel.
+         Voter blanc force les citoyens à utiliser leur droit de vote qui peut avoir des effets déstabilisateurs sur les résultats, et remettre en question le système actuel.
         </p>
       </div>
     </div>

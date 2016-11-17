@@ -15,4 +15,8 @@ button {}
   padding: 1rem;
   border-radius: 1.75rem;
   background-color: #f7a072;
+  &:hover {
+    cursor: pointer;
+    background-color: #F8B876;
+  }
 }

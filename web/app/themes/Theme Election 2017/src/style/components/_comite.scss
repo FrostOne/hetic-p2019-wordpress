@@ -7,13 +7,13 @@
 		color: #444a59;
 	}
 	&__subtitle{
-		font-size: 90%;
+		font-size: 110%;
 		font-family: Roboto;
 		color: #444a59;
 	}
 	&__content{
-		line-heihgt: 1.3em;
-		font-size: 90%;
+		line-height: 1.5;
+		font-size: 1.2em;
 		font-family: Roboto;
 		color: #444a59;
 	}
@@ -22,13 +22,13 @@
 .video{
 	&__author{
 		margin-top: 1em;
-		font-size: 90%;
+		font-size: 1.1em;
 		font-family: Roboto;
 		color: #444a59;
 	}
 	&__role{
 		margin-top: 1em;
-		font-size: 70%;
+		font-size: 1em;
 		font-family: Roboto;
 		color: #b5b7bd;
 	}
@@ -52,24 +52,22 @@
 		font-size:180%;
 		font-family: Roboto;
 		color: #fff;	
-		padding-top:60px;	
 		text-align: right;
 	}
 	&__button{
 		postion: relative;
-		margin-top:60px;
 	}
 }
-	
+
 .message{
 	&__label{
-		font-size: 90%;
+		font-size: 1.1em;
 		font-weight: bold;
 		font-family: Roboto;
 		color: #444a59;
 	}
 	&__title{
-		font-size: 110%;
+		font-size: 1.5em;
 		font-family: Roboto;
 		color: #444a59;
 	}
@@ -97,14 +95,14 @@
 .post{
 	&__author{
 		margin-top:40px;
-		font-size: 120%;
+		font-size:  1.8em;
 		font-family: Roboto;
 		color: #444a59;
 	}
 	&__content{
 		margin-top:20px;
 		line-heihgt: 1.8em;
-		font-size: 80%;
+		font-size: 1.2em;
 		font-family: Roboto;
 		color: #444a59;
 	}
@@ -129,4 +127,12 @@
 	background: #bebebe;
 	margin-top: 33px;
 	z-index : -1;
+}
+
+.flex {
+	display: flex;
+}
+
+.vertical-align {
+	align-self: flex-start;
 }
