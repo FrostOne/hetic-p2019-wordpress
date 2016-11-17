@@ -1,0 +1,21 @@
+.single {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+
+    .single__article {
+        max-width: 55%;
+    }
+
+    .single__content {
+        font-size: 1rem;
+        line-height: 1.7em;
+        margin-top: 3%;
+    }
+
+    .single__author {
+        margin-top: 2%;
+    }
+
+}
