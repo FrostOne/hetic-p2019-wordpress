@@ -13,10 +13,13 @@ button {}
   color: white;
   height: 2.5rem;
   padding: 1rem;
-  border-radius: 1.75rem;
+  border-radius: 7px;
   background-color: #f7a072;
   &:hover {
     cursor: pointer;
     background-color: #F8B876;
+  }
+  strong{
+    margin-left: .45rem;
   }
 }

@@ -1,10 +1,10 @@
-<?php include_once('header.php'); // call header.php  ?>
+<?php get_header(); // call header.php  ?>
 
 <div class="carousel__slider js_slider js_simple">
     <?php wd_slider(1);?>
     <div class="carousel__text">
         <h2 class="carousel__title">POUR UNE<br>FRANCE PLUS <span style="color: #bfded9;">NEUTRE</span></h2>
-        <div class="carousel__description">Le vote blanc consiste à déposer un bulletrin blanc, ou une enveloppe vide dans l’urne. Cela manifeste une envie de </div>
+        <div class="carousel__description">Le Vote Blanc consiste pour un électeur à déposer dans l’urne un bulletin blanc dépourvu de tout nom de candidat ou une enveloppe vide. Voter blanc indique une volonté de participer au débat démocratique mais marque un refus des choix proposés.</div>
         <div class="button">SOUTENEZ LE <strong>VOTE BLANC</strong></div>
     </div>
 </div>
@@ -45,7 +45,7 @@
   <div class="cta__text">Vous avez le pouvoir de changer les choses, votez blanc</div>
   <div class="button">SOUTENEZ LE VOTE <strong>BLANC</strong></div>
 </section>
-<section style="background-color : black;">
+<section style="background-color : black; background-size : cover; background-image: url('<?php bloginfo('template_directory'); ?>/images/marianne.png');">
   <div class="comments">
       <?php
       $args = array(
