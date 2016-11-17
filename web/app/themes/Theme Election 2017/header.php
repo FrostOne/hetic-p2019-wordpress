@@ -13,7 +13,7 @@
 
 <body class="homepage">
    <nav class="row">
-      <img src="<?php bloginfo('template_directory'); ?>/images/logo.png">
+      <a href="<?php echo home_url(); ?>" title="Logo"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png"></a>
       <div class="col-1"></div>
       <div class="col-7 ma">
         <ul>
