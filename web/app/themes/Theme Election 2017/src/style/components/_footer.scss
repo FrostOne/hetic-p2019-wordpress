@@ -3,9 +3,7 @@ footer{
 	height : 70px;
 	background: #191919;
 }
-footer div{
-	margin-top:30px!important;
-}
+
 footer .left{
 	text-align: right;
 }
@@ -24,4 +22,8 @@ footer{
 	font-size: 70%;
 	font-family: Roboto;
 	color:#fff;
+}
+
+footer .row {
+	padding-top: 30px;
 }

@@ -24,8 +24,9 @@ nav ul li:hover {
 	border-top: 4px solid #373f51;
 	padding-top: 25px;
 	transition: border 0.3s linear;
-
+	cursor: pointer;
 }
+
 nav{
 	font-size: 80%;
 	font-family: Roboto;
@@ -34,6 +35,10 @@ nav{
 
 .menu a {
 	text-decoration: none;
+}
+
+.menu a:hover {
+	cursor: pointer;
 }
 
 .timer{
