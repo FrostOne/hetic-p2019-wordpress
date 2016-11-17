@@ -53,7 +53,7 @@ get_header(); // call header.php
       <div class="row">
         <div class="ma ban__title col-8">  Vous avez le pouvoir de changer les choses : votez blanc</div>
         <div class="ban__button">
-          <button class="ma"> SOUTENEZ <strong>LE VOTE BLANC</strong></button>
+          <a class ="ma button" href="http://localhost:8888/H3/hetic-p2019-wordpress/web/wp/wp-login.php?action=register" class="lwa-links-register lwa-links-modal">SOUTENEZ <strong>LE VOTE BLANC</strong> </a>
         </div>
       </div>
   </div>

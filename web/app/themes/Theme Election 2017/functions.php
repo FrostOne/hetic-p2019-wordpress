@@ -5,10 +5,6 @@ include_once('inc/custom_post_types.php');
 include_once('inc/roles.php');
 // taxonomies init
 include_once('inc/taxonomies.php');
-// styles script init
-// include_once('inc/scripts_styles.php');
-// theme support
-// include_once('inc/theme_support.php');
 // activate thumbnail
 add_theme_support( 'post-thumbnails' );
 
@@ -29,3 +25,19 @@ add_action('get_header', 'remove_admin_login_header');
 function remove_admin_login_header() {
     remove_action('wp_head', '_admin_bar_bump_cb');
 }
+
+//Register our sidebars and widgetized areas.
+function arphabet_widgets_init() {
+
+    register_sidebar( array(
+        'name'          => 'Home right sidebar',
+        'id'            => 'home_right_1',
+        'before_widget' => '<div>',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="rounded">',
+        'after_title'   => '</h2>',
+    ) );
+
+}
+add_action( 'widgets_init', 'arphabet_widgets_init' );
+

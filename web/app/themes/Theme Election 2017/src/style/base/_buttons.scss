@@ -15,11 +15,15 @@ button {}
   padding: 1rem;
   border-radius: 7px;
   background-color: #f7a072;
+  text-decoration: none;
+
   &:hover {
     cursor: pointer;
     background-color: #F8B876;
   }
-  strong{
+
+  strong{ 
     margin-left: .45rem;
   }
+
 }
